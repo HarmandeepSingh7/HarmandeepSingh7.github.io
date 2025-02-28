@@ -1,0 +1,126 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1e1e2f, #2c3e50);
+    color: white;
+    overflow-x: hidden;
+}
+
+.navbar {
+    background: black; /* Set navbar background color to black */
+    backdrop-filter: blur(10px);
+    transition: background 0.3s ease-in-out;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: transform 0.3s;
+}
+
+.navbar-brand:hover {
+    transform: scale(1.1);
+}
+
+.nav-link {
+    font-size: 1.1rem;
+    transition: color 0.3s ease-in-out, transform 0.3s;
+}
+
+.nav-link:hover {
+    color: #ff4757 !important;
+    transform: translateY(-3px);
+}
+
+header {
+    text-align: center;
+    padding: 100px 0; /* Adjust padding to add space between navbar and cards */
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.1); /* Transparent card background */
+    border: none;
+    backdrop-filter: blur(5px);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    height: 100%; /* Ensure all cards have the same height */
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card-img-top:hover {
+    transform: scale(1.1); /* Slight zoom effect on image */
+}
+
+.card-title {
+    color: white; /* Card title text color */
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card-title a {
+    color: white; /* Set title text color to white */
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.card-title a:hover {
+    color: white;
+    text-decoration: none;
+    transform: scale(1.1); /* Flashy hover effect */
+    text-shadow: 0 0 20px white, 0 0 30px black; /* Glow effect with white text and black shadow box */
+    box-shadow: 0 0 15px black; /* Add black shadow box around the text */
+}
+
+.card:hover .card-title,
+.card:hover .card-text {
+    color: white;
+    text-shadow: 0 0 10px rgba(0, 123, 255, 0.8); /* Glow effect for text on card hover */
+}
+
+footer {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px 0;
+}
+
+/* Responsive styling for cards */
+@media (max-width: 768px) {
+    .col-md-4 {
+        max-width: 100% !important;
+    }
+}
+
