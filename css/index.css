@@ -3,98 +3,93 @@
     margin: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-
-    body {
-        background: linear-gradient(135deg, #1e1e2f, #2c3e50);
-        color: white;
-        overflow-x: hidden;
-    }
-
-    .navbar {
-        background: rgba(0, 0, 0, 0.8);
-        backdrop-filter: blur(10px);
-    }
-
-    .navbar-brand {
-        font-size: 1.5rem;
-        font-weight: bold;
-        transition: transform 0.3s;
-    }
-    .navbar-brand:hover {
-        transform: scale(1.1);
-    }
-
-    .nav-link {
-        font-size: 1.1rem;
-        transition: color 0.3s ease-in-out, transform 0.3s;
-    }
-    .nav-link:hover {
-        color: #ff4757 !important;
-        transform: translateY(-3px);
-    }
-
-    header {
-        text-align: center;
-        padding: 100px 0;
-        animation: fadeIn 2s ease-in-out;
-    }
-
-    @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(-20px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
-
-    .card {
-        background: rgba(255, 255, 255, 0.1);
-        border: none;
-        backdrop-filter: blur(5px);
-        transition: transform 0.3s ease-in-out;
-    }
-    .card:hover {
-        transform: scale(1.05);
-    }
-
-    footer {
-        background: rgba(0, 0, 0, 0.8);
-        padding: 20px 0;
-    }
-
-    .card.hover {
-        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-        background-color: #f8f9fa;
-        border: none;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        position: relative;
-        overflow: hidden;
-    }
-
-    .card::before {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 0;
-        height: 0;
-        background: rgba(255, 255, 255, 0.2);
-        transition: width 0.3s ease-in-out, height 0.3s ease-in-out, opacity 0.3s ease-in-out;
-        border-radius: 50%;
-        transform: translate(-50%, -50%);
-        opacity: 0;
-    }
-
-
-    .card:hover {
-        transform: scale(1.05);
-    }
-
-    .card-title, .card-text {
-        transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
-    }
-
-    .card:hover .card-title,
-    .card:hover .card-text {
-        color: white;
-        text-shadow: 0 0 10px rgba(0, 123, 255, 0.8);
-    }
-
 }
 
+body {
+    background: linear-gradient(135deg, #1e1e2f, #2c3e50);
+    color: white;
+    overflow-x: hidden;
+}
+
+.navbar {
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: transform 0.3s;
+}
+
+.navbar-brand:hover {
+    transform: scale(1.1);
+}
+
+.nav-link {
+    font-size: 1.1rem;
+    transition: color 0.3s ease-in-out, transform 0.3s;
+}
+
+.nav-link:hover {
+    color: #ff4757 !important;
+    transform: translateY(-3px);
+}
+
+header {
+    text-align: center;
+    padding: 100px 0;
+}
+
+/* Fade-in animation with translate effect */
+@keyframes fadeInEffect {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Apply the fade-in animation to both header texts */
+.slide-in {
+    opacity: 0; /* Initially make the text invisible */
+    animation: fadeInEffect 2s ease-out forwards; /* Fade-in with 2-second duration */
+    animation-delay: 0.5s; /* Slight delay for smooth appearance */
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds shadow for a cool effect */
+}
+
+/* Paragraph fade-in effect */
+header .container p {
+    opacity: 0; /* Initially make the paragraph invisible */
+    animation: fadeInEffect 2s ease-out 1.5s forwards; /* Fade-in with 2-second duration */
+}
+
+footer {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px 0;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    backdrop-filter: blur(5px);
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-title, .card-text {
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+.card:hover .card-title,
+.card:hover .card-text {
+    color: white;
+    text-shadow: 0 0 10px rgba(0, 123, 255, 0.8);
+}
