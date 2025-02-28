@@ -88,11 +88,11 @@ header {
 
 .card-title {
     color: white; /* Card title text color */
-    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
 }
 
 .card-title a {
-    color: white; /* Set title text color to white */
+    color: #212529;
     text-decoration: none;
     font-weight: bold;
     transition: all 0.3s ease;
@@ -100,10 +100,8 @@ header {
 
 .card-title a:hover {
     color: white;
-    text-decoration: none;
     transform: scale(1.1); /* Flashy hover effect */
     text-shadow: 0 0 20px white, 0 0 30px black; /* Glow effect with white text and black shadow box */
-    box-shadow: 0 0 15px black; /* Add black shadow box around the text */
 }
 
 .card:hover .card-title,
@@ -112,15 +110,24 @@ header {
     text-shadow: 0 0 10px rgba(0, 123, 255, 0.8); /* Glow effect for text on card hover */
 }
 
-footer {
-    background: rgba(0, 0, 0, 0.8);
-    padding: 20px 0;
+/* Space between navbar and content */
+.container-fluid {
+    padding: 3rem 0;
+    background: none; /* Remove background color from container */
 }
 
-/* Responsive styling for cards */
-@media (max-width: 768px) {
-    .col-md-4 {
-        max-width: 100% !important;
-    }
+.hover-text {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #333;
+    margin-top: 20px;
+    opacity: 0;
+    transform: translateY(30px); /* Start with text slightly below */
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 }
 
+/* When hovering over the row, make the text visible and animate */
+.row:hover .hover-text {
+    opacity: 1;
+    transform: translateY(0); /* Slide the text up smoothly */
+}
