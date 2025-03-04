@@ -113,3 +113,27 @@ footer {
     background: rgba(0, 0, 0, 0.8);
     padding: 20px 0;
 }
+
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: linear-gradient(135deg, #1e1e2f, #2c3e50);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ddd;
+}
+
+::-webkit-scrollbar-corner {
+    background: linear-gradient(135deg, #1e1e2f, #2c3e50);
+}
