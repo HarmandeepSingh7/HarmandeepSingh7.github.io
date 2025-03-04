@@ -115,7 +115,6 @@ header {
     background: none;
 }
 
-/* Hover Text */
 .hover-text {
     text-align: center;
     font-size: 1.5rem;
@@ -126,18 +125,15 @@ header {
     transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 }
 
-/* When hovering over the row, make the text visible */
 .row:hover .hover-text {
     opacity: 1;
     transform: translateY(0);
 }
 
-/* Container adjustments */
 .project-container {
     position: relative;
 }
 
-/* Hidden images next to the middle card, initially */
 .extra-images {
     position: absolute;
     top: 0;
@@ -149,13 +145,11 @@ header {
     transform: translateX(20px);
 }
 
-/* Make the images appear when hovering over the middle card */
 .card-img-top:hover + .extra-images {
     opacity: 1;
     transform: translateX(0);
 }
 
-/* Center images within the cards */
 .center-image {
     display: block;
     margin-left: auto;

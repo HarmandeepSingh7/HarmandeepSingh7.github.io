@@ -41,7 +41,6 @@ header {
     padding: 100px 0;
 }
 
-/* Fade-in animation with translate effect */
 @keyframes fadeInEffect {
     0% {
         opacity: 0;
@@ -51,21 +50,19 @@ header {
     }
 }
 
-/* Apply the fade-in animation to both header texts */
 .slide-in {
-    opacity: 0; /* Initially make the text invisible */
-    animation: fadeInEffect 2s ease-out forwards; /* Fade-in with 2-second duration */
-    animation-delay: 0.5s; /* Slight delay for smooth appearance */
+    opacity: 0;
+    animation: fadeInEffect 2s ease-out forwards;
+    animation-delay: 0.5s;
     font-size: 3rem;
     font-weight: bold;
     color: #fff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds shadow for a cool effect */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-/* Paragraph fade-in effect */
 header .container p {
-    opacity: 0; /* Initially make the paragraph invisible */
-    animation: fadeInEffect 2s ease-out 1.5s forwards; /* Fade-in with 2-second duration */
+    opacity: 0;
+    animation: fadeInEffect 2s ease-out 1.5s forwards;
 }
 
 footer {

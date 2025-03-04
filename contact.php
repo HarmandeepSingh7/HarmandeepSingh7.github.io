@@ -106,8 +106,8 @@ $conn = null;
                     <p><i class="bi bi-geo-alt"></i> Location: The Hague, Netherlands</p>
                     <hr>
                     <h3>Follow Me</h3>
-                    <a href="#" class="social-icon"><i class="bi bi-github"></i></a>
-                    <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a>
+                    <a href="https://github.com/HarmandeepSingh7" class="social-icon"><i class="bi bi-github"></i></a>
+                    <a href="https://www.linkedin.com/in/harmandeepsingh06/" class="social-icon"><i class="bi bi-linkedin"></i></a>
                 </div>
             </div>
         </div>
