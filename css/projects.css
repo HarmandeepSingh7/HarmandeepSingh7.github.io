@@ -2,13 +2,14 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
 }
 
 body {
     background: linear-gradient(135deg, #1e1e2f, #2c3e50);
     color: white;
     overflow-x: hidden;
+    min-height: 100vh;
 }
 
 .navbar {
@@ -54,18 +55,30 @@ header {
     }
 }
 
+.container-fluid {
+    padding: 4rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.row {
+    margin: 0 -1rem;
+}
+
 .card {
-    background: rgba(255, 255, 255, 0.1);
-    border: none;
-    backdrop-filter: blur(5px);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     height: 100%;
     overflow: hidden;
+    border-radius: 15px;
 }
 
 .card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.1);
 }
 
 .card-body {
@@ -73,56 +86,65 @@ header {
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
+    padding: 1.5rem;
 }
 
 .card-img-top {
-    height: 200px;
+    height: 220px;
     object-fit: cover;
     border-radius: 10px;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.5s ease;
+    margin: 0.5rem 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-.card-img-top:hover {
-    transform: scale(1.1);
+.card:hover .card-img-top {
+    transform: scale(1.05);
 }
 
 .card-title {
-    color: white;
-    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    font-weight: 600;
 }
 
 .card-title a {
-    color: #212529;
+    color: #fff;
     text-decoration: none;
-    font-weight: bold;
     transition: all 0.3s ease;
+    position: relative;
 }
 
-.card-title a:hover {
-    color: white;
-    transform: scale(1.1);
-    text-shadow: 0 0 20px white, 0 0 30px black;
+.card-title a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #fff;
+    transition: width 0.3s ease;
 }
 
-.card:hover .card-title,
-.card:hover .card-text {
-    color: white;
-    text-shadow: 0 0 10px rgba(0, 123, 255, 0.8);
+.card-title a:hover::after {
+    width: 100%;
 }
 
-.container-fluid {
-    padding: 3rem 0;
-    background: none;
+.card-text {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+    font-size: 0.95rem;
+    margin-top: 1rem;
 }
 
 .hover-text {
     text-align: center;
-    font-size: 1.5rem;
-    color: #333;
-    margin-top: 20px;
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 2rem;
     opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
 }
 
 .row:hover .hover-text {
@@ -143,4 +165,18 @@ header {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+@media (max-width: 768px) {
+    .container-fluid {
+        padding: 2rem 1rem;
+    }
+    
+    .card {
+        margin-bottom: 1.5rem;
+    }
+    
+    .card-img-top {
+        height: 180px;
+    }
 }
